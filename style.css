@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffb6c1, #b3e5ff);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  z-index: 10;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.2em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Cake */
+.cake {
+  position: relative;
+  width: 180px;
+  margin: 0 auto;
+}
+.plate {
+  width: 220px;
+  height: 20px;
+  background: #fff;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+}
+.layer {
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  position: relative;
+}
+.layer-bottom {
+  background: #ff99cc;
+}
+.layer-middle {
+  background: #ffb3e6;
+  top: -10px;
+}
+.layer-top {
+  background: #ffe6f7;
+  top: -20px;
+}
+.icing {
+  width: 180px;
+  height: 20px;
+  background: #fff0f5;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  top: -30px;
+}
+
+/* Candle */
+.candle {
+  width: 10px;
+  height: 40px;
+  background: #99ccff;
+  position: absolute;
+  top: -70px;
+  left: 85px;
+  border-radius: 3px;
+}
+.flame {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #ffcc33 40%, #ff6600 60%);
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  left: -2px;
+  animation: flicker 0.15s infinite alternate;
+}
+@keyframes flicker {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.9); opacity: 0.7; }
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #fffefc;
+}
+
+/* Balloons Canvas */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
